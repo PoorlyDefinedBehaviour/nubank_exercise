@@ -1,4 +1,4 @@
-const toadjacencyList = edges => {
+const toAdjacencyList = edges => {
   const adjacencyList = {}
 
   for (const edge of edges) {
@@ -73,7 +73,7 @@ const areNodesConnected = (a, b, adjacencyList, visited = new Set()) => {
 
 const areNodesInSameCollisionNetwork = (nodes, graph) => {
   const edges = graphStringToEdges(graph)
-  const adjacencyList = toadjacencyList(edges)
+  const adjacencyList = toAdjacencyList(edges)
 
   return areNodesConnected(nodes[0], nodes[1], adjacencyList)
 }
